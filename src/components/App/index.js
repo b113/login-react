@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import Join from '../Join';
 import Sign from '../Sign';
-// import './app.css';
 import styles from './app.module.css'
 
 class App extends Component {
@@ -10,10 +9,10 @@ class App extends Component {
     console.log(styles)
     return (
       <Router>
-        <div className={styles.App}>
-          <nav>
-            <Link to="/">Sign in</Link>
-            <Link to="/join">Join us</Link>
+        <div className={styles.app}>
+          <nav className={styles.nav}>
+            <NavLink exact className={styles.nav__link} to="/" activeClassName={styles.nav__link_active}>Sign in</NavLink>
+            <NavLink className={styles.nav__link} to="/join" activeClassName={styles.nav__link_active}>Join us</NavLink>
           </nav>
           <Route exact path="/" component={Sign} />
           <Route path="/join" component={Join} />
