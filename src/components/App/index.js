@@ -6,7 +6,6 @@ import styles from './app.module.css'
 
 class App extends Component {
   render() {
-    console.log(styles)
     return (
       <Router>
         <div className={styles.app}>
