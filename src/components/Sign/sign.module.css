@@ -8,6 +8,11 @@ input {
     display: block;
 }
 
+input::placeholder {
+    color:  #fbf6e4;
+    opacity: .5;
+  }
+
 .signInForm__usernameLabel,
 .signInForm__passwordLabel {
     font-size: 16px;
@@ -24,6 +29,10 @@ input {
     padding: 10px;
     box-sizing: border-box;
     color: #fbf6e4;
+}
+
+.signInForm__usernameInput_error {
+    border: 2px solid red;
 }
 
 .signInForm__keepsignedInput,
@@ -101,6 +110,10 @@ input {
     font-size: 18px;
     margin-bottom: 30px;
     cursor: pointer;
+}
+
+.signInForm__submitBtn_disabled {
+    opacity:0.5;
 }
 
 .signIn__recoverLinkPass {
